@@ -27,7 +27,7 @@ type Game = {
   emoji: string;
   colors: string;
   description: string;
-  kind: 'snake' | 'pong' | 'breakout' | 'invaders' | 'external';
+  kind: 'snake' | 'pong' | 'breakout' | 'invaders' | 'external' | 'embedded';
   url?: string;
   featured?: boolean;
 };
@@ -179,10 +179,152 @@ const games: Game[] = [
     year: 'Modern retro',
     emoji: '🌈',
     colors: 'linear-gradient(135deg,#322a58,#7165ad)',
-    description:
-      'A tiny fantasy console built around making and sharing pixel games.',
+    description: 'A tiny fantasy console built around making and sharing pixel games.',
     kind: 'external',
     url: 'https://www.lexaloffle.com/pico-8.php',
+    featured: false,
+  },
+  {
+    id: 'neon-fist',
+    title: 'Neon Fist: 1v1 Fighter',
+    category: 'Fighting',
+    platform: 'Open source',
+    year: '2026',
+    emoji: '🥊',
+    colors: 'linear-gradient(135deg,#27144e,#7b2d8f)',
+    description: 'MIT-licensed 2D fighting game with CPU battles and local two-player controls.',
+    kind: 'embedded',
+    url: './games/neon-fist/index.html',
+    featured: true,
+  },
+  {
+    id: 'gh-breakout',
+    title: 'Neon Breakout',
+    category: 'Arcade',
+    platform: 'Open source',
+    year: 'Modern retro',
+    emoji: '🧱',
+    colors: 'linear-gradient(135deg,#3e1d51,#f04d8d)',
+    description: 'Open-source brick breaker with levels, power-ups, and score chasing.',
+    kind: 'embedded',
+    url: 'https://tmhsdigital.github.io/GH-Arcade/games/breakout/',
+    featured: true,
+  },
+  {
+    id: 'gh-snake',
+    title: 'Neon Snake',
+    category: 'Arcade',
+    platform: 'Open source',
+    year: 'Modern retro',
+    emoji: '🐍',
+    colors: 'linear-gradient(135deg,#193d3b,#2bd6a3)',
+    description: 'Classic snake gameplay from an MIT-licensed browser arcade collection.',
+    kind: 'embedded',
+    url: 'https://tmhsdigital.github.io/GH-Arcade/games/snake/',
+    featured: true,
+  },
+  {
+    id: 'gh-pong',
+    title: 'Neon Pong Versus',
+    category: 'Fighting',
+    platform: 'Open source',
+    year: 'Modern retro',
+    emoji: '🏓',
+    colors: 'linear-gradient(135deg,#142f55,#2878aa)',
+    description: 'A quick versus-style paddle duel from the open-source arcade shelf.',
+    kind: 'embedded',
+    url: 'https://tmhsdigital.github.io/GH-Arcade/games/pong/',
+    featured: true,
+  },
+  {
+    id: 'gh-stack',
+    title: 'Neon Stack',
+    category: 'Puzzle',
+    platform: 'Open source',
+    year: 'Modern retro',
+    emoji: '🟪',
+    colors: 'linear-gradient(135deg,#33215a,#8d5be2)',
+    description: 'Stack blocks, manage timing, and chase a better score.',
+    kind: 'embedded',
+    url: 'https://tmhsdigital.github.io/GH-Arcade/games/stack/',
+    featured: false,
+  },
+  {
+    id: 'gh-astro',
+    title: 'Astro Blaster',
+    category: 'Shooter',
+    platform: 'Open source',
+    year: 'Modern retro',
+    emoji: '🚀',
+    colors: 'linear-gradient(135deg,#101d4e,#4261b9)',
+    description: 'A fast space-shooter entry in an open-source arcade collection.',
+    kind: 'embedded',
+    url: 'https://tmhsdigital.github.io/GH-Arcade/games/astro/',
+    featured: true,
+  },
+  {
+    id: 'gh-maze',
+    title: 'Neon Maze',
+    category: 'Puzzle',
+    platform: 'Open source',
+    year: 'Modern retro',
+    emoji: '🌀',
+    colors: 'linear-gradient(135deg,#19384a,#328ca4)',
+    description: 'Navigate a neon maze in this browser-playable arcade game.',
+    kind: 'embedded',
+    url: 'https://tmhsdigital.github.io/GH-Arcade/games/maze/',
+    featured: false,
+  },
+  {
+    id: 'gh-pinball',
+    title: 'Neon Pinball',
+    category: 'Arcade',
+    platform: 'Open source',
+    year: 'Modern retro',
+    emoji: '🎯',
+    colors: 'linear-gradient(135deg,#4c2133,#bd5d61)',
+    description: 'Keep the ball alive and build a high score in a retro pinball table.',
+    kind: 'embedded',
+    url: 'https://tmhsdigital.github.io/GH-Arcade/games/pinball/',
+    featured: false,
+  },
+  {
+    id: 'gh-runner',
+    title: 'Neon Runner',
+    category: 'Platformer',
+    platform: 'Open source',
+    year: 'Modern retro',
+    emoji: '🏃',
+    colors: 'linear-gradient(135deg,#3d321a,#bc8e3d)',
+    description: 'A quick reflex runner with a retro arcade presentation.',
+    kind: 'embedded',
+    url: 'https://tmhsdigital.github.io/GH-Arcade/games/runner/',
+    featured: false,
+  },
+  {
+    id: 'gh-siege',
+    title: 'Star Siege',
+    category: 'Shooter',
+    platform: 'Open source',
+    year: 'Modern retro',
+    emoji: '👾',
+    colors: 'linear-gradient(135deg,#18234b,#4358a2)',
+    description: 'Space combat from a browser arcade collection, with co-op play.',
+    kind: 'embedded',
+    url: 'https://tmhsdigital.github.io/GH-Arcade/games/siege/',
+    featured: true,
+  },
+  {
+    id: 'gh-hop',
+    title: 'Neon Hop',
+    category: 'Platformer',
+    platform: 'Open source',
+    year: 'Modern retro',
+    emoji: '🦘',
+    colors: 'linear-gradient(135deg,#263b2a,#7ca64b)',
+    description: 'Jump through a bright, fast-paced platforming challenge.',
+    kind: 'embedded',
+    url: 'https://tmhsdigital.github.io/GH-Arcade/games/hop/',
     featured: false,
   },
 ];
@@ -193,6 +335,8 @@ const categories = [
   'Platformer',
   'Adventure',
   'Handheld',
+  'Fighting',
+  'Puzzle',
 ];
 const platforms = [
   'All platforms',
@@ -203,6 +347,7 @@ const platforms = [
   'Emulator',
   'Game Boy-style',
   'Fantasy console',
+  'Open source',
 ];
 const storageRead = (key: string): string[] => {
   try {
@@ -823,7 +968,7 @@ function RetroArcade() {
               <article className="game-card" key={game.id}>
                 <div className="game-cover" style={{ background: game.colors }}>
                   <span className="cover-tag">
-                    {game.kind === 'external' ? 'EXPLORE' : 'PLAY NOW'}
+                    {game.kind === 'external' ? 'EXPLORE' : game.kind === 'embedded' ? 'OPEN IN ARCADE' : 'PLAY NOW'}
                   </span>
                   <span className="cover-emoji" aria-hidden="true">
                     {game.emoji}
@@ -862,7 +1007,7 @@ function RetroArcade() {
                       className="play-link"
                       onClick={() => openGame(game)}
                     >
-                      {game.kind === 'external' ? 'Explore' : 'Play game'}{' '}
+                      {game.kind === 'external' ? 'Explore' : game.kind === 'embedded' ? 'Play in site' : 'Play game'}{' '}
                       {game.kind === 'external' ? (
                         <ExternalLink size={13} />
                       ) : (
@@ -1004,7 +1149,18 @@ function RetroArcade() {
             if (e.target === e.currentTarget) setActiveGame(null);
           }}
         >
-          <ArcadeCanvas game={activeGame} onClose={() => setActiveGame(null)} />
+          {activeGame.kind === 'embedded' ? (
+            <div className="game-modal embedded-modal" role="dialog" aria-modal="true" aria-label={activeGame.title}>
+              <div className="modal-head">
+                <div><h2>{activeGame.title}</h2><p>Open-source browser game · No account required</p></div>
+                <button className="close-button" onClick={() => setActiveGame(null)} aria-label="Close game"><X size={18} /></button>
+              </div>
+              <iframe className="embedded-game-frame" src={activeGame.url} title={activeGame.title} allow="autoplay; fullscreen; gamepad" allowFullScreen />
+              <div className="game-controls"><div className="control-hint">If a game does not load inside the frame, open its source-hosted version in a new tab.</div><a className="play-link" href={activeGame.url} target="_blank" rel="noreferrer">Open separately <ExternalLink size={13} /></a></div>
+            </div>
+          ) : (
+            <ArcadeCanvas game={activeGame} onClose={() => setActiveGame(null)} />
+          )}
         </div>
       )}
     </div>
