@@ -2148,7 +2148,7 @@ async function boot(){
       fetchJSON: async (u)=>{ const r=await fetch(u,{cache:'no-store'});
         if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); },
       baseConfig: loader.assets.fighter,
-      endpoint: '/api/config',
+      endpoint: './api/config',
       validate: validateFighter,
       audit: auditFighterConfig,
       fingerprint: configFingerprint,
@@ -2226,12 +2226,7 @@ async function boot(){
 }
 boot();
 
-/* ---------------- PWA registration (Phase 14) ---------------- */
-if('serviceWorker' in navigator && location.protocol.startsWith('http')){
-  window.addEventListener('load',()=>{
-    navigator.serviceWorker.register('sw.js').catch(e=>console.warn('SW failed:',e.message));
-  });
-}
+/* Embedded build: no standalone service worker registration. */
 
 </script>
 </body>
