@@ -831,3 +831,11 @@ select:focus-visible {
   }
 }
 
+
+
+/* Open-source embedded game player */
+.embedded-modal{width:min(100%,1120px);height:min(90vh,820px);display:flex;flex-direction:column}
+.embedded-game-frame{display:block;flex:1;width:100%;min-height:280px;border:0;background:#05040a}
+.embedded-modal .game-controls{flex-shrink:0}
+.embedded-modal .game-controls a{color:#d8ff65;text-decoration:none}
+@media(max-width:720px){.embedded-modal{height:calc(100dvh - 24px);width:100%;border-radius:12px}.embedded-game-frame{min-height:240px}.modal-backdrop{padding:12px}}
