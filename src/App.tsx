@@ -27,7 +27,7 @@ type Game = {
   emoji: string;
   colors: string;
   description: string;
-  kind: 'snake' | 'pong' | 'breakout' | 'invaders' | 'external' | 'embedded';
+  kind: 'snake' | 'pong' | 'breakout' | 'invaders' | 'external' | 'embedded' | 'runngun' | 'duel';
   url?: string;
   featured?: boolean;
 };
@@ -198,134 +198,28 @@ const games: Game[] = [
     featured: true,
   },
   {
-    id: 'gh-breakout',
-    title: 'Neon Breakout',
-    category: 'Arcade',
-    platform: 'Open source',
-    year: 'Modern retro',
-    emoji: '🧱',
-    colors: 'linear-gradient(135deg,#3e1d51,#f04d8d)',
-    description: 'Open-source brick breaker with levels, power-ups, and score chasing.',
-    kind: 'embedded',
-    url: 'https://tmhsdigital.github.io/GH-Arcade/games/breakout/',
+    id: 'pixel-commando',
+    title: 'Pixel Commando',
+    category: 'Shooter',
+    platform: 'Original',
+    year: '2026',
+    emoji: '🪖',
+    colors: 'linear-gradient(135deg,#263d2b,#9b6a3b)',
+    description: 'An original Contra-inspired run-and-gun challenge. Move, jump, and blast through pixel enemies.',
+    kind: 'runngun',
     featured: true,
   },
   {
-    id: 'gh-snake',
-    title: 'Neon Snake',
-    category: 'Arcade',
-    platform: 'Open source',
-    year: 'Modern retro',
-    emoji: '🐍',
-    colors: 'linear-gradient(135deg,#193d3b,#2bd6a3)',
-    description: 'Classic snake gameplay from an MIT-licensed browser arcade collection.',
-    kind: 'embedded',
-    url: 'https://tmhsdigital.github.io/GH-Arcade/games/snake/',
-    featured: true,
-  },
-  {
-    id: 'gh-pong',
-    title: 'Neon Pong Versus',
+    id: 'pixel-duel',
+    title: 'Pixel Duel',
     category: 'Fighting',
-    platform: 'Open source',
-    year: 'Modern retro',
-    emoji: '🏓',
-    colors: 'linear-gradient(135deg,#142f55,#2878aa)',
-    description: 'A quick versus-style paddle duel from the open-source arcade shelf.',
-    kind: 'embedded',
-    url: 'https://tmhsdigital.github.io/GH-Arcade/games/pong/',
+    platform: 'Original',
+    year: '2026',
+    emoji: '⚔️',
+    colors: 'linear-gradient(135deg,#34214f,#b34f72)',
+    description: 'Local two-player arcade duel on one keyboard. Challenge a friend on the same device.',
+    kind: 'duel',
     featured: true,
-  },
-  {
-    id: 'gh-stack',
-    title: 'Neon Stack',
-    category: 'Puzzle',
-    platform: 'Open source',
-    year: 'Modern retro',
-    emoji: '🟪',
-    colors: 'linear-gradient(135deg,#33215a,#8d5be2)',
-    description: 'Stack blocks, manage timing, and chase a better score.',
-    kind: 'embedded',
-    url: 'https://tmhsdigital.github.io/GH-Arcade/games/stack/',
-    featured: false,
-  },
-  {
-    id: 'gh-astro',
-    title: 'Astro Blaster',
-    category: 'Shooter',
-    platform: 'Open source',
-    year: 'Modern retro',
-    emoji: '🚀',
-    colors: 'linear-gradient(135deg,#101d4e,#4261b9)',
-    description: 'A fast space-shooter entry in an open-source arcade collection.',
-    kind: 'embedded',
-    url: 'https://tmhsdigital.github.io/GH-Arcade/games/astro/',
-    featured: true,
-  },
-  {
-    id: 'gh-maze',
-    title: 'Neon Maze',
-    category: 'Puzzle',
-    platform: 'Open source',
-    year: 'Modern retro',
-    emoji: '🌀',
-    colors: 'linear-gradient(135deg,#19384a,#328ca4)',
-    description: 'Navigate a neon maze in this browser-playable arcade game.',
-    kind: 'embedded',
-    url: 'https://tmhsdigital.github.io/GH-Arcade/games/maze/',
-    featured: false,
-  },
-  {
-    id: 'gh-pinball',
-    title: 'Neon Pinball',
-    category: 'Arcade',
-    platform: 'Open source',
-    year: 'Modern retro',
-    emoji: '🎯',
-    colors: 'linear-gradient(135deg,#4c2133,#bd5d61)',
-    description: 'Keep the ball alive and build a high score in a retro pinball table.',
-    kind: 'embedded',
-    url: 'https://tmhsdigital.github.io/GH-Arcade/games/pinball/',
-    featured: false,
-  },
-  {
-    id: 'gh-runner',
-    title: 'Neon Runner',
-    category: 'Platformer',
-    platform: 'Open source',
-    year: 'Modern retro',
-    emoji: '🏃',
-    colors: 'linear-gradient(135deg,#3d321a,#bc8e3d)',
-    description: 'A quick reflex runner with a retro arcade presentation.',
-    kind: 'embedded',
-    url: 'https://tmhsdigital.github.io/GH-Arcade/games/runner/',
-    featured: false,
-  },
-  {
-    id: 'gh-siege',
-    title: 'Star Siege',
-    category: 'Shooter',
-    platform: 'Open source',
-    year: 'Modern retro',
-    emoji: '👾',
-    colors: 'linear-gradient(135deg,#18234b,#4358a2)',
-    description: 'Space combat from a browser arcade collection, with co-op play.',
-    kind: 'embedded',
-    url: 'https://tmhsdigital.github.io/GH-Arcade/games/siege/',
-    featured: true,
-  },
-  {
-    id: 'gh-hop',
-    title: 'Neon Hop',
-    category: 'Platformer',
-    platform: 'Open source',
-    year: 'Modern retro',
-    emoji: '🦘',
-    colors: 'linear-gradient(135deg,#263b2a,#7ca64b)',
-    description: 'Jump through a bright, fast-paced platforming challenge.',
-    kind: 'embedded',
-    url: 'https://tmhsdigital.github.io/GH-Arcade/games/hop/',
-    featured: false,
   },
 ];
 const categories = [
@@ -400,6 +294,13 @@ function ArcadeCanvas({ game, onClose }: { game: Game; onClose: () => void }) {
       color: ['#ff8269', '#e5bd64', '#9bc34b', '#7bbad1'][Math.floor(i / 9)],
     }));
     let ship = { x: W / 2, y: H - 36 };
+    let hero = { x: 72, y: H - 58, vy: 0, onGround: true };
+    let runEnemies = Array.from({ length: 8 }, (_, i) => ({ x: 170 + i * 58, y: H - 38, on: true, dir: i % 2 ? -1 : 1 }));
+    let duelPaddles = { leftY: H / 2 - 34, rightY: H / 2 - 34 };
+    let duelBall = { x: W / 2, y: H / 2, vx: 4, vy: 2 };
+    let duelScores = { left: 0, right: 0 };
+    let easedRightUp = false;
+    let easedRightDown = false;
     let bullets: { x: number; y: number }[] = [];
     let enemies = Array.from({ length: 24 }, (_, i) => ({
       x: 80 + (i % 8) * 65,
@@ -433,6 +334,15 @@ function ArcadeCanvas({ game, onClose }: { game: Game; onClose: () => void }) {
         ].includes(e.key)
       )
         e.preventDefault();
+      if (game.kind === 'runngun' && (e.key === 'ArrowUp' || e.key === 'w')) {
+        if (hero.onGround) { hero.vy = -11; hero.onGround = false; }
+      }
+      if (game.kind === 'duel') {
+        if (e.key === 'w') move.up = true;
+        if (e.key === 's') move.down = true;
+        if (e.key === 'ArrowUp') easedRightUp = true;
+        if (e.key === 'ArrowDown') easedRightDown = true;
+      }
       if (game.kind === 'snake') {
         if ((e.key === 'ArrowUp' || e.key === 'w') && dir.y !== 1)
           nextDir = { x: 0, y: -1 };
@@ -453,6 +363,10 @@ function ArcadeCanvas({ game, onClose }: { game: Game; onClose: () => void }) {
     const keyUp = (e: KeyboardEvent) => {
       if (e.key === 'ArrowLeft' || e.key === 'a') move.left = false;
       if (e.key === 'ArrowRight' || e.key === 'd') move.right = false;
+      if (e.key === 'w') move.up = false;
+      if (e.key === 's') move.down = false;
+      if (e.key === 'ArrowUp') easedRightUp = false;
+      if (e.key === 'ArrowDown') easedRightDown = false;
       if (e.key === ' ' || e.key === 'ArrowUp' || e.key === 'w')
         move.fire = false;
     };
@@ -635,6 +549,47 @@ function ArcadeCanvas({ game, onClose }: { game: Game; onClose: () => void }) {
           drawText('LEVEL CLEAR!', W / 2, H / 2, 24, lime);
           over = true;
         }
+      } else if (game.kind === 'runngun') {
+        ctx.fillStyle = '#111a18'; ctx.fillRect(0, 0, W, H);
+        ctx.fillStyle = '#263b2c'; ctx.fillRect(0, H - 24, W, 24);
+        for (let i = 0; i < 18; i++) { ctx.fillStyle = i % 2 ? '#4d6b3c' : '#7d9250'; ctx.fillRect((i * 47 - tick * 2) % (W + 20), H - 24, 20, 5); }
+        if (move.left) hero.x -= 4; if (move.right) hero.x += 4;
+        hero.x = Math.max(14, Math.min(W - 14, hero.x));
+        hero.vy += 0.55; hero.y += hero.vy;
+        if (hero.y >= H - 45) { hero.y = H - 45; hero.vy = 0; hero.onGround = true; }
+        if (move.fire && tick % 8 === 0) bullets.push({ x: hero.x + 12, y: hero.y - 8 });
+        bullets = bullets.filter(b => b.x < W + 10);
+        bullets.forEach(b => { b.x += 9; ctx.fillStyle = '#ffe36b'; ctx.fillRect(b.x, b.y, 12, 3); });
+        runEnemies.forEach((e, i) => {
+          if (!e.on) return;
+          e.x += e.dir * (1 + Math.sin(tick / 20 + i) * 0.5);
+          if (e.x < 80 || e.x > W - 20) e.dir *= -1;
+          bullets.forEach(b => { if (Math.abs(b.x - e.x) < 16 && Math.abs(b.y - e.y) < 20) { e.on = false; currentScore += 25; setScore(currentScore); } });
+          ctx.fillStyle = '#f16e5b'; ctx.fillRect(e.x - 10, e.y - 13, 20, 25);
+          ctx.fillStyle = '#f5f0df'; ctx.fillRect(e.x - 5, e.y - 8, 4, 4);
+        });
+        ctx.fillStyle = '#d8ff65'; ctx.fillRect(hero.x - 9, hero.y - 16, 18, 26);
+        ctx.fillStyle = '#f5f0df'; ctx.fillRect(hero.x + 2, hero.y - 11, 9, 5);
+        if (runEnemies.every(e => !e.on)) { drawText('STAGE CLEAR!', W / 2, H / 2, 24, lime); over = true; }
+      } else if (game.kind === 'duel') {
+        ctx.fillStyle = '#090d1c'; ctx.fillRect(0, 0, W, H);
+        ctx.setLineDash([8, 10]); ctx.strokeStyle = '#53647a'; ctx.beginPath(); ctx.moveTo(W / 2, 0); ctx.lineTo(W / 2, H); ctx.stroke(); ctx.setLineDash([]);
+        if (move.up) duelPaddles.leftY -= 6; if (move.down) duelPaddles.leftY += 6;
+        if (easedRightUp) duelPaddles.rightY -= 6; if (easedRightDown) duelPaddles.rightY += 6;
+        duelPaddles.leftY = Math.max(0, Math.min(H - 68, duelPaddles.leftY));
+        duelPaddles.rightY = Math.max(0, Math.min(H - 68, duelPaddles.rightY));
+        duelBall.x += duelBall.vx; duelBall.y += duelBall.vy;
+        if (duelBall.y < 7 || duelBall.y > H - 7) duelBall.vy *= -1;
+        if (duelBall.x < 24 && duelBall.y >= duelPaddles.leftY && duelBall.y <= duelPaddles.leftY + 68) duelBall.vx = Math.abs(duelBall.vx) + 0.2;
+        if (duelBall.x > W - 24 && duelBall.y >= duelPaddles.rightY && duelBall.y <= duelPaddles.rightY + 68) duelBall.vx = -Math.abs(duelBall.vx) - 0.2;
+        if (duelBall.x < 0) { duelScores.right++; duelBall = {x:W/2,y:H/2,vx:-4,vy:2}; }
+        if (duelBall.x > W) { duelScores.left++; duelBall = {x:W/2,y:H/2,vx:4,vy:-2}; }
+        ctx.fillStyle = '#d8ff65'; ctx.fillRect(12, duelPaddles.leftY, 10, 68);
+        ctx.fillStyle = '#7bbad1'; ctx.fillRect(W - 22, duelPaddles.rightY, 10, 68);
+        ctx.fillStyle = '#f5f0df'; ctx.fillRect(duelBall.x - 6, duelBall.y - 6, 12, 12);
+        drawText('P1 ' + duelScores.left + '   P2 ' + duelScores.right, W / 2, 25, 16, lime);
+        currentScore = duelScores.left + duelScores.right; setScore(currentScore);
+        if (duelScores.left >= 5 || duelScores.right >= 5) { drawText(duelScores.left >= 5 ? 'PLAYER 1 WINS' : 'PLAYER 2 WINS', W/2, H/2, 24, lime); over = true; }
       } else {
         if (move.left) ship.x -= 6;
         if (move.right) ship.x += 6;
@@ -725,7 +680,11 @@ function ArcadeCanvas({ game, onClose }: { game: Game; onClose: () => void }) {
             ? 'Move with arrow keys or WASD.'
             : game.kind === 'invaders'
               ? 'Move with arrows or A/D; fire with Space.'
-              : 'Move with arrows or A/D, or drag/touch the playfield.'}
+              : game.kind === 'runngun'
+                ? 'Move with A/D or arrows, jump with W/Up, and shoot with Space.'
+                : game.kind === 'duel'
+                  ? 'Player 1: W/S. Player 2: Up/Down. First to 5 wins.'
+                  : 'Move with arrows or A/D, or drag/touch the playfield.'}
           <br />
           Escape closes the game.
         </div>
