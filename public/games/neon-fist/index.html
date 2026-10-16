@@ -2148,7 +2148,7 @@ async function boot(){
       fetchJSON: async (u)=>{ const r=await fetch(u,{cache:'no-store'});
         if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); },
       baseConfig: loader.assets.fighter,
-      endpoint: './api/config',
+      endpoint: null,
       validate: validateFighter,
       audit: auditFighterConfig,
       fingerprint: configFingerprint,
@@ -2164,18 +2164,7 @@ async function boot(){
     resize();
 
     /* ---- Phase 15: telemetry (batched, sampled, off the hot path) ---- */
-    TEL = new Telemetry({
-      transport: async (batch,{beacon}={})=>{
-        const body = JSON.stringify(batch);
-        if(beacon && navigator.sendBeacon){
-          navigator.sendBeacon('/api/telemetry', new Blob([body],{type:'application/json'}));
-          return;
-        }
-        await fetch('/api/telemetry',{method:'POST',headers:{'content-type':'application/json'},
-          body, keepalive:true});
-      },
-      flushMs: 15000, sampleRate: 0.1,
-    });
+    TEL = new Telemetry({ transport: async () => {}, flushMs: 15000, sampleRate: 0 });
     TEL.identify(PLAYER_ID, { configVersion: CONFIG_VERSION });
     TEL.start();
     TEL.step(FUNNEL.APP_OPEN);
